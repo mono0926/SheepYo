@@ -14,12 +14,12 @@
     #define MAS_VIEW UIView
     #define MASEdgeInsets UIEdgeInsets
 
-    enum {
-        MASLayoutPriorityRequired = UILayoutPriorityRequired,
-        MASLayoutPriorityDefaultHigh = UILayoutPriorityDefaultHigh,
-        MASLayoutPriorityDefaultMedium = 500,
-        MASLayoutPriorityDefaultLow = UILayoutPriorityDefaultLow,
-        MASLayoutPriorityFittingSizeLevel = UILayoutPriorityFittingSizeLevel,
+enum {
+    MASLayoutPriorityRequired = (int)UILayoutPriorityRequired,
+    MASLayoutPriorityDefaultHigh = (int)UILayoutPriorityDefaultHigh,
+    MASLayoutPriorityDefaultMedium = 500,
+    MASLayoutPriorityDefaultLow = (int)UILayoutPriorityDefaultLow,
+    MASLayoutPriorityFittingSizeLevel = (int)UILayoutPriorityFittingSizeLevel,
     };
     typedef float MASLayoutPriority;
 
