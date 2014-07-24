@@ -11,6 +11,10 @@
 		583553B10EA248C485992F9B /* libPods-SheepTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F68FC543C594724AF0AEF10 /* libPods-SheepTests.a */; };
 		FE06BE14198117A1007367EA /* ObjcHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06BE13198117A1007367EA /* ObjcHelper.m */; };
 		FE7C17861980B64A0070FAD3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7C17851980B64A0070FAD3 /* Crashlytics.framework */; };
+		FEC4AB3E19819DE000E84978 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEC4AB3C19819DE000E84978 /* Model.xcdatamodeld */; };
+		FEC4AB4019819E0C00E84978 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4AB3F19819E0C00E84978 /* Account.swift */; };
+		FEC4AB4319819F5300E84978 /* IOUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4AB4219819F5300E84978 /* IOUtil.swift */; };
+		FEC4AB451981AB1B00E84978 /* sheep.caf in Resources */ = {isa = PBXBuildFile; fileRef = FEC4AB441981AA4400E84978 /* sheep.caf */; };
 		FECB66EA1980B2DA00FFD05C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB66E91980B2DA00FFD05C /* AppDelegate.swift */; };
 		FECB66EC1980B2DA00FFD05C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB66EB1980B2DA00FFD05C /* ViewController.swift */; };
 		FECB66EF1980B2DA00FFD05C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECB66ED1980B2DA00FFD05C /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 		FE7C17851980B64A0070FAD3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		FE7C17871980B6620070FAD3 /* Sheep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sheep-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE7C178A1980B78C0070FAD3 /* Sheep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Sheep.entitlements; sourceTree = "<group>"; };
+		FEC4AB3D19819DE000E84978 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FEC4AB3F19819E0C00E84978 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		FEC4AB4219819F5300E84978 /* IOUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOUtil.swift; sourceTree = "<group>"; };
+		FEC4AB441981AA4400E84978 /* sheep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sheep.caf; sourceTree = "<group>"; };
 		FECB66E41980B2DA00FFD05C /* Sheep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sheep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECB66E81980B2DA00FFD05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECB66E91980B2DA00FFD05C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FEC4AB3819819BF500E84978 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FEC4AB3919819BFB00E84978 /* View */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FEC4AB3919819BFB00E84978 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FECB66EB1980B2DA00FFD05C /* ViewController.swift */,
+				FECB66ED1980B2DA00FFD05C /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FEC4AB3A19819DB900E84978 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FEC4AB4119819F4800E84978 /* Util */,
+				FEC4AB3B19819DD100E84978 /* Model */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		FEC4AB3B19819DD100E84978 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEC4AB3C19819DE000E84978 /* Model.xcdatamodeld */,
+				FEC4AB3F19819E0C00E84978 /* Account.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FEC4AB4119819F4800E84978 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FEC4AB4219819F5300E84978 /* IOUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		FECB66DB1980B2DA00FFD05C = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +155,15 @@
 		FECB66E61980B2DA00FFD05C /* Sheep */ = {
 			isa = PBXGroup;
 			children = (
+				FE7C17871980B6620070FAD3 /* Sheep-Bridging-Header.h */,
+				FEC4AB3819819BF500E84978 /* UI */,
+				FEC4AB3A19819DB900E84978 /* Library */,
 				FE06BE12198117A1007367EA /* ObjcHelper.h */,
 				FE06BE13198117A1007367EA /* ObjcHelper.m */,
 				FE7C178A1980B78C0070FAD3 /* Sheep.entitlements */,
-				FE7C17871980B6620070FAD3 /* Sheep-Bridging-Header.h */,
 				FECB66E91980B2DA00FFD05C /* AppDelegate.swift */,
-				FECB66EB1980B2DA00FFD05C /* ViewController.swift */,
-				FECB66ED1980B2DA00FFD05C /* Main.storyboard */,
 				FECB66F01980B2DA00FFD05C /* Images.xcassets */,
+				FEC4AB441981AA4400E84978 /* sheep.caf */,
 				FECB66E71980B2DA00FFD05C /* Supporting Files */,
 			);
 			path = Sheep;
@@ -234,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECB66EF1980B2DA00FFD05C /* Main.storyboard in Resources */,
+				FEC4AB451981AB1B00E84978 /* sheep.caf in Resources */,
 				FECB66F11980B2DA00FFD05C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,9 +381,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC4AB4019819E0C00E84978 /* Account.swift in Sources */,
+				FEC4AB4319819F5300E84978 /* IOUtil.swift in Sources */,
 				FE06BE14198117A1007367EA /* ObjcHelper.m in Sources */,
 				FECB66EC1980B2DA00FFD05C /* ViewController.swift in Sources */,
 				FECB66EA1980B2DA00FFD05C /* AppDelegate.swift in Sources */,
+				FEC4AB3E19819DE000E84978 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +615,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FEC4AB3C19819DE000E84978 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FEC4AB3D19819DE000E84978 /* Model.xcdatamodel */,
+			);
+			currentVersion = FEC4AB3D19819DE000E84978 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FECB66DC1980B2DA00FFD05C /* Project object */;
 }

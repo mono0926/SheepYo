@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    var player: AVAudioPlayer?
 
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         
-        Parse.setApplicationId(ObjcHelper.parseApplicationId(), clientKey: ObjcHelper.parseClientKey())        
+        Parse.setApplicationId(ObjcHelper.parseApplicationId(), clientKey: ObjcHelper.parseClientKey())
+        
+        
+        MagicalRecord.setupCoreDataStack()
+        
+        ObjcHelper.registerRemoteNotification()
         
         Crashlytics.startWithAPIKey("d95b1c50531d0d17895fc1a2c84053145215f757")
         
-        ObjcHelper.registerRemoteNotification()
         return true
     }
 
@@ -44,6 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication!, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]!) {
+        
+        let notification = CWStatusBarNotification()
+        notification.displayNotificationWithMessage("(　´･‿･｀)", forDuration: 5)
+        let path = NSBundle.mainBundle().pathForResource("sheep", ofType: "caf")
+        let url = NSURL(fileURLWithPath: path)
+        player = AVAudioPlayer(contentsOfURL: url, error: nil)
+        player!.play()
     }
     
     
