@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         Crashlytics.startWithAPIKey("d95b1c50531d0d17895fc1a2c84053145215f757")
+        ObjcHelper.registerRemoteNotification()
         return true
     }
 
@@ -40,7 +41,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    
+    func application(application: UIApplication!, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!)
+    {
+        let tokenId = deviceToken.description
+        println("deviceToken: \(tokenId)")
+    }
+    
+    func application(application: UIApplication!, didFailToRegisterForRemoteNotificationsWithError error: NSError!)
+    {
+        println("didFailToRegisterForRemoteNotificationsWithError")
+    }
+    
+    func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings!)
+    {
+        ObjcHelper.registerRemoteNotificationForIOS8()
+//        UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
+    
+    /*
+    class func registerRemoteNotification() {
+        let app = UIApplication.sharedApplication();
+        if app.respondsToSelector("registerUserNotificationSettings:") {
+            let settings = UIUserNotificationSettings(forTypes: .Badge | .Sound | .Alert, categories: nil)
+            app.registerUserNotificationSettings(settings)
+            return
+        }
+        let types: UIRemoteNotificationType = .Badge | .Sound | .Alert
+        app.registerForRemoteNotificationTypes(types)
+    }
+    */
 }
 

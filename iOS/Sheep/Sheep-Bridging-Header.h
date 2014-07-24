@@ -3,3 +3,4 @@
 //
 
 #import <Crashlytics/Crashlytics.h>
+#import "ObjcHelper.h"
