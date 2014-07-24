@@ -6,3 +6,5 @@
 #
 # Pods/
 .DS_Store
+iOS/Pods/Pods.xcodeproj/xcuserdata
+iOS/Sheep.xcworkspace/xcuserdata
