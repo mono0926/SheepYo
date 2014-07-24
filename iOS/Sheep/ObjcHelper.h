@@ -11,4 +11,6 @@
 @interface ObjcHelper : NSObject
 +(void)registerRemoteNotification;
 +(void)registerRemoteNotificationForIOS8;
++(NSString*)parseApplicationId;
++(NSString*)parseClientKey;
 @end

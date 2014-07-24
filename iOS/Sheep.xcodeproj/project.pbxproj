@@ -447,8 +447,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15987A3D436C49ED943AFB7A /* Pods-Sheep.xcconfig */;
 			buildSettings = {
+				APP_NAME = SheepDev;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_ID_SUFFIX = .dev;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -460,7 +462,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "FECC3ACD-9B01-4F2E-967E-AC0C9AA48D17";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sheep/Sheep-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -470,8 +472,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15987A3D436C49ED943AFB7A /* Pods-Sheep.xcconfig */;
 			buildSettings = {
+				APP_NAME = Sheep;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				BUNDLE_ID_SUFFIX = "";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -483,7 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "53C5148E-9972-4ABB-9587-B859989449A3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sheep/Sheep-Bridging-Header.h";
 			};
 			name = Release;

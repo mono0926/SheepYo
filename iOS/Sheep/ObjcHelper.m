@@ -30,4 +30,20 @@
     [app registerForRemoteNotifications];
 }
 
++(NSString*)parseApplicationId {
+#if DEBUG
+    return @"jmhZPiIg1DZLjIs7b7p5jyTa5cKHzJEw0YPHo794";
+#else
+    return @"Wi9CvSjrmZtT9EtQHFMmOCyfhbtg9rRKUPU94CuC";
+#endif
+}
+
++(NSString*)parseClientKey {
+#if DEBUG
+    return @"I9LUaBT76zgHxNaFSFM7BsaiK3AhgJejnDGqEKvh";
+#else
+    return @"338lq2yik9LA1CV2M0thfKDikwHIpjhHcAU0Pndd";
+#endif
+}
+
 @end

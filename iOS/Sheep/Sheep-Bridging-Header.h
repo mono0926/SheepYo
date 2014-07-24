@@ -4,3 +4,4 @@
 
 #import <Crashlytics/Crashlytics.h>
 #import "ObjcHelper.h"
+#import <Parse/Parse.h>

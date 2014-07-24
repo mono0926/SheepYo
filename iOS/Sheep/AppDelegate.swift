@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+        
+        Parse.setApplicationId(ObjcHelper.parseApplicationId(), clientKey: ObjcHelper.parseClientKey())        
+        
         Crashlytics.startWithAPIKey("d95b1c50531d0d17895fc1a2c84053145215f757")
+        
         ObjcHelper.registerRemoteNotification()
         return true
     }
@@ -47,6 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         let tokenId = deviceToken.description
         println("deviceToken: \(tokenId)")
+        let installation = PFInstallation.currentInstallation()
+        installation.setDeviceTokenFromData(deviceToken)
+        installation.saveInBackground()
     }
     
     func application(application: UIApplication!, didFailToRegisterForRemoteNotificationsWithError error: NSError!)

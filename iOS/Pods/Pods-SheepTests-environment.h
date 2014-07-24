@@ -84,6 +84,12 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 2
 #define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 3
 
+// Bolts
+#define COCOAPODS_POD_AVAILABLE_Bolts
+#define COCOAPODS_VERSION_MAJOR_Bolts 1
+#define COCOAPODS_VERSION_MINOR_Bolts 1
+#define COCOAPODS_VERSION_PATCH_Bolts 0
+
 // CWStatusBarNotification
 #define COCOAPODS_POD_AVAILABLE_CWStatusBarNotification
 #define COCOAPODS_VERSION_MAJOR_CWStatusBarNotification 2
@@ -101,6 +107,12 @@
 #define COCOAPODS_VERSION_MAJOR_FFCircularProgressView 0
 #define COCOAPODS_VERSION_MINOR_FFCircularProgressView 4
 #define COCOAPODS_VERSION_PATCH_FFCircularProgressView 0
+
+// Facebook-iOS-SDK
+#define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
+#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 3
+#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 16
+#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 2
 
 // GoogleAnalytics-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_GoogleAnalytics_iOS_SDK
@@ -131,6 +143,12 @@
 #define COCOAPODS_VERSION_MAJOR_Masonry 0
 #define COCOAPODS_VERSION_MINOR_Masonry 5
 #define COCOAPODS_VERSION_PATCH_Masonry 2
+
+// Parse
+#define COCOAPODS_POD_AVAILABLE_Parse
+#define COCOAPODS_VERSION_MAJOR_Parse 1
+#define COCOAPODS_VERSION_MINOR_Parse 2
+#define COCOAPODS_VERSION_PATCH_Parse 20
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
