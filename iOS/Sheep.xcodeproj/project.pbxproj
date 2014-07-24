@@ -545,6 +545,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "53C5148E-9972-4ABB-9587-B859989449A3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sheep/Sheep-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};
